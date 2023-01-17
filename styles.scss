@@ -23,10 +23,22 @@ body {
   width: 337px;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: $bp-large) {
+    width: 932px;
+  }
 }
 
 .description {
   // .description__text
+  margin-top: 71px;
+  @media (min-width: $bp-large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    column-gap: 54px;
+    row-gap: 10px;
+    align-items: start;
+  }
   &__text {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -35,6 +47,11 @@ body {
     color: $black;
     margin-top: 10px;
     margin-bottom: 0;
+    @media (min-width: $bp-large) {
+      font-size: 18px;
+      line-height: 27px;
+      margin-top: 0;
+    }
   }
 }
 
@@ -45,8 +62,11 @@ body {
   line-height: 48px;
   letter-spacing: -0.045em;
   color: $black;
-  margin-top: 71px;
+  margin-top: 0;
   margin-bottom: 0;
+  @media (min-width: $bp-large) {
+    grid-row: 1 / -1;
+  }
 }
 
 .heading-2 {
@@ -58,6 +78,9 @@ body {
   color: $black;
   margin-top: 38px;
   margin-bottom: 0;
+  @media (min-width: $bp-large) {
+    margin-top: 0;
+  }
 }
 
 .crew {
@@ -68,12 +91,24 @@ body {
   column-gap: 27px;
   margin-top: 62px;
   margin-bottom: 0;
+  @media (min-width: $bp-large) {
+    margin-top: 96px;
+    grid-template-rows: repeat(4, 115px) 69px;
+    grid-template-columns: repeat(3, 264px);
+    grid-auto-rows: 115px 115px 115px 115px 69px;
+    column-gap: 66px;
+  }
 }
 
 .crewman {
   display: grid;
   grid-template-rows: 220px 55px;
   grid-template-columns: 139px 13px;
+
+  @media (min-width: $bp-large) {
+    grid-template-rows: 347px 69px;
+    grid-template-columns: 238px 26px;
+  }
 
   // .crewman__photo
   &__photo {
@@ -110,26 +145,44 @@ body {
 
 .crewman--1 {
   grid-row: 1 / span 5;
+  @media (min-width: $bp-large) {
+    grid-row: 1 / span 4;
+  }
 }
 
 .crewman--2 {
   grid-row: 2 / span 5;
+  @media (min-width: $bp-large) {
+    grid-row: 2 / span 4;
+  }
 }
 
 .crewman--3 {
   grid-row: 7 / span 5;
+  @media (min-width: $bp-large) {
+    grid-row: 1 / span 4;
+  }
 }
 
 .crewman--4 {
   grid-row: 8 / span 5;
+  @media (min-width: $bp-large) {
+    grid-row: 6 / span 4;
+  }
 }
 
 .crewman--5 {
   grid-row: 13 / span 5;
+  @media (min-width: $bp-large) {
+    grid-row: 7 / span 4;
+  }
 }
 
 .crewman--6 {
   grid-row: 14 / span 5;
+  @media (min-width: $bp-large) {
+    grid-row: 6 / span 4;
+  }
 }
 
 .footer {
