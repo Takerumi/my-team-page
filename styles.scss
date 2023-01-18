@@ -23,6 +23,12 @@ body {
   width: 337px;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: $bp-small) {
+    width: 580px;
+  }
+  @media (min-width: $bp-medium) {
+    width: 650px;
+  }
   @media (min-width: $bp-large) {
     width: 932px;
   }
@@ -31,6 +37,13 @@ body {
 .description {
   // .description__text
   margin-top: 71px;
+  @media (min-width: $bp-small) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @media (min-width: $bp-medium) {
+    margin-left: 31px;
+  }
   @media (min-width: $bp-large) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -88,15 +101,24 @@ body {
   grid-template-rows: repeat(4, 55px) 35px;
   grid-template-columns: repeat(2, 155px);
   grid-auto-rows: 55px 55px 55px 55px 35px;
+  justify-content: center;
   column-gap: 27px;
   margin-top: 62px;
   margin-bottom: 0;
+  @media (min-width: $bp-small) {
+    column-gap: 37px;
+    grid-template-rows: repeat(4, auto) 35px;
+    grid-template-columns: repeat(2, minmax(155px, 264px));
+    grid-auto-rows: auto auto auto auto 35px;
+  }
+  @media (min-width: $bp-medium) {
+    column-gap: 66px;
+  }
   @media (min-width: $bp-large) {
     margin-top: 96px;
     grid-template-rows: repeat(4, 115px) 69px;
     grid-template-columns: repeat(3, 264px);
     grid-auto-rows: 115px 115px 115px 115px 69px;
-    column-gap: 66px;
   }
 }
 
@@ -104,10 +126,19 @@ body {
   display: grid;
   grid-template-rows: 220px 55px;
   grid-template-columns: 139px 13px;
+  column-gap: 7px;
+  row-gap: 10px;
+
+  @media (min-width: $bp-small) {
+    grid-template-rows: minmax(220px, max-content) 55px;
+    grid-template-columns: minmax(139px, max-content) 13px;
+  }
 
   @media (min-width: $bp-large) {
     grid-template-rows: 347px 69px;
     grid-template-columns: 238px 26px;
+    column-gap: 10px;
+    row-gap: 15px;
   }
 
   // .crewman__photo
@@ -127,8 +158,13 @@ body {
     width: 13px;
     text-transform: uppercase;
     color: $black;
-    margin-left: 7px;
+    margin-left: 0;
     margin-right: 0;
+    @media (min-width: $bp-large) {
+      font-size: 12px;
+      line-height: 16px;
+      width: 16px;
+    }
   }
 
   // .crewman__name
@@ -138,8 +174,12 @@ body {
     font-size: 14px;
     line-height: 21px;
     color: $black;
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 0;
+    @media (min-width: $bp-large) {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 }
 
